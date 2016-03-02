@@ -1,0 +1,241 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;\f2\fmodern\fcharset0 Courier-Bold;
+\f3\fmodern\fcharset0 Courier-BoldOblique;\f4\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red242\green242\blue242;\red217\green11\blue0;\red239\green143\blue179;
+\red85\green142\blue40;\red163\green217\blue121;\red0\green68\blue254;}
+\margl1440\margr1440\vieww9660\viewh17160\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs36 \cf0 10-11:15, 11:15-11:30 break. 11:30-12:45\
+\
+COMMAND		do something\
+PROMPT			$ place to enter commands\
+folders = directory	they mean the same thing\
+ls -al				shows list of files and directories\
+pwd				\'93primary working directory\'94 							shows where you are\
+ARGUMENT		thing that command acts on\
+FLAGS			HOW the command should run\
+				usually of format <-x>\
+
+\b cd <directory>	
+\b0 	change directory \
+
+\b cd ..	
+\b0 			go UP one directory\
+
+\b cd ../..
+\b0 \
+
+\b cd / 
+\b0 				goes to ROOT\
+
+\b cd ~	
+\b0 			goes HOME /users/student\
+
+\b cd -
+\b0 				\
+
+\b mkdir <example directory name>
+\b0 	MAKE A NEW DIRECTORY\
+
+\b rmdir <example directory name>
+\b0  	Remove a Directory\
+< username >		levylorenzo\
+< TAB >		 	auto complete\
+< UP >			previous command\
+< DOWN >			next command\
+CMD-C			COPY\
+CMD-V			PASTE\
+CMD-A			select ALL\
+PATHNAME		the name of the location\
+				e.g. 
+\f1 \cf2 \cb0 \CocoaLigature0 /Users/professor\
+\
+
+\f0 \cf0 \cb1 \CocoaLigature1 ~				users/student\
+
+\b ls -l	
+\b0 			-l flag for long list\
+
+\b ls -al	
+\b0 			show all files in long list\
+
+\b echo
+\b0 				outputs the same argument\
+
+\b clear 	
+\b0 		cleans up the terminal window\
+
+\b CNTRL-C
+\b0 			interrupt current process\
+				*emergency exit*\
+
+\b curl http://anything.com		\
+	
+\b0 download web location\
+
+\b curl -o randomfile.txt http://anything.com
+\b0  \
+	FLAG to specify a file to download TO\
+\
+UNZIP \'97 deals with .zip files\
+
+\b unzip filename.zip
+\b0 	\
+UNCOMPRESS / UNARCHIVE \'97 deals with .tar.gz files\
+
+\b tar -xvf filethatscompressed.tar.gz 
+\b0 \
+\
+COMPRESSING / ARCHIVING\
+
+\b tar -cvf filethatscompressed.tar stufftobecompressed
+\b0 \
+\
+GZIPPING >>>> outputs a .gz file\
+gzip filename.txt\
+\
+ABSOLUTE PATH	starts from the root /Users/student\'85.\
+RELATIVE PATCH	from the place you are in the folders\
+\
+touch <filename.txt>	make a file exist\
+cp <filetocopy> <filedestination>	COPY a file\
+mv <filetocopy> <filedestination>	MOVE a file\
+\
+less <filename.txt>		see a file in small pages\
+more <filename.txt>		see a file in larger pages	\
+cat <filename.txt>			\
+head <filename.txt>\
+tail <filename.txt>\
+\
+rm <filename.txt>\
+\
+*					WILDCARD - or anything with specjfication\
+*.txt	= ALL text files\
+\
+wc					WORD COUNT\
+wc -l					line count\
+\
+
+\b chmod				
+\b0 changes permissions\
+u = user\
+g = group\
+o = world\
+r = read\
+w = write\
+x = execute\
+\
+chown				change owner\
+\
+nano				command line editor\
+date					show date \
+cal	<year>				show calendar\
+================\
+GIT STUFF - week 4\
+\
+1.  make a directory where you want to the local repository to be \
+2.  go to that directory \
+3.  use PWD to make sure that you\'92re IN that directory \
+\
+// Create Local Repository
+\b \
+git init
+\b0 			\
+\
+// Configure local repository with your github username and email\
+
+\b git config user.name \'93levylorenzo\'94\
+git config user.email \'93llorenzo@citytech.edu\'94\
+
+\b0 \cf3 \
+// Create remote repository\
+\pard\pardeftab720
+
+\f2\b \cf0 \cb4 curl -u 
+\f3\i \cb5 levylorenzo
+\f2\i0 \cb4  https://api.github.com/user/repos -d '\{"name\'94:\'94
+\f3\i \cb5 lab4
+\f2\i0 \cb4 \'94\}\'92\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b0 \cf3 \cb1 \
+\cf0 // Link local and remote repository\
+\pard\pardeftab720
+
+\f2\b \cf0 git remote add origin https://github.com/\cb6 levylorenzo\cb1 /\cb6 lab4\cb1 .git
+\f4\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 \
+// check that they are linked\
+
+\b git remote -v show\
+
+\b0 \
+\'85. it should output something like:\
+\pard\pardeftab720
+
+\f4 \cf7 origin	https://github.com/bzuckerman/lab-04-version-control.git (fetch)\
+origin	https://github.com/bzuckerman/lab-04-version-control.git (push)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0 \cf0 \
+===============\
+\
+// check status\
+git status\
+\
+// add a file thats changed\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b\fs48 \cf0 git add --all
+\b0\fs36 \
+\
+// commit to final push\
+
+\b\fs48 git commit -m \'91i add extra garlic\'92
+\b0\fs36 \
+\
+//final push to remote \
+
+\b\fs48 git push origin master
+\b0\fs36 \
+\
+git log\
+git log --color\
+git diff --color\
+git reset filename.txt\
+git reset HEAD^\
+\
+\
+FILE COMMANDS\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 touch		
+\b0 make a file exist\
+
+\b nano		
+\b0 edit the file\
+
+\b cat			
+\b0 view the file\
+\
+
+\b ls -l
+\b0 			view permissions and details of file\
+\
+
+\b chmod
+\b0 \'85 		change permissions\
+\
+
+\b chmod u+x file.txt
+\b0 		allow user to EXECUTE the file\
+\
+SCRIPTS\
+./scriptname.sh			RUN/execute the SCRIPT\
+\
+ps aux					show processes\
+kill #####				kill #### process\
+}
