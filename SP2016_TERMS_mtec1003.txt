@@ -1,0 +1,162 @@
+10-11:15, 11:15-11:30 break. 11:30-12:45
+
+COMMAND		do something
+PROMPT			$ place to enter commands
+folders = directory	they mean the same thing
+ls -al				shows list of files and directories
+pwd				“primary working directory” 							shows where you are
+ARGUMENT		thing that command acts on
+FLAGS			HOW the command should run
+				usually of format <-x>
+cd <directory>		change directory 
+cd ..				go UP one directory
+cd ../..
+cd / 				goes to ROOT
+cd ~				goes HOME /users/student
+cd -				
+mkdir <example directory name>	MAKE A NEW DIRECTORY
+rmdir <example directory name> 	Remove a Directory
+< username >		levylorenzo
+< TAB >		 	auto complete
+< UP >			previous command
+< DOWN >			next command
+CMD-C			COPY
+CMD-V			PASTE
+CMD-A			select ALL
+PATHNAME		the name of the location
+				e.g. /Users/professor
+
+~				users/student
+ls -l				-l flag for long list
+ls -al				show all files in long list
+echo				outputs the same argument
+clear 			cleans up the terminal window
+CTRL-C			interrupt current process
+				*emergency exit*
+curl http://anything.com		
+	download web location
+curl -o randomfile.txt http://anything.com 
+	FLAG to specify a file to download TO
+
+UNZIP — deals with .zip files
+unzip filename.zip	
+UNCOMPRESS / UNARCHIVE — deals with .tar.gz files
+tar -xvf filethatscompressed.tar.gz 
+
+COMPRESSING / ARCHIVING
+tar -cvf filethatscompressed.tar stufftobecompressed
+
+GZIPPING >>>> outputs a .gz file
+gzip filename.txt
+
+ABSOLUTE PATH	starts from the root /Users/student….
+RELATIVE PATCH	from the place you are in the folders
+
+touch <filename.txt>	make a file exist
+cp <filetocopy> <filedestination>	COPY a file
+mv <filetocopy> <filedestination>	MOVE a file
+
+less <filename.txt>		see a file in small pages
+more <filename.txt>		see a file in larger pages	
+cat <filename.txt>			
+head <filename.txt>
+tail <filename.txt>
+
+rm <filename.txt>
+
+*					WILDCARD - or anything with specjfication
+*.txt	= ALL text files
+
+wc					WORD COUNT
+wc -l					line count
+
+chmod				changes permissions
+u = user
+g = group
+o = world
+r = read
+w = write
+x = execute
+
+chown				change owner
+
+nano				command line editor
+date					show date 
+cal	<year>				show calendar
+================
+GIT STUFF - week 4
+
+1.  make a directory where you want to the local repository to be 
+2.  go to that directory 
+3.  use PWD to make sure that you’re IN that directory 
+
+// Create Local Repository
+git init			
+
+// Configure local repository with your github username and email
+git config user.name “levylorenzo”
+git config user.email “llorenzo@citytech.edu”
+
+// Create remote repository
+curl -u levylorenzo https://api.github.com/user/repos -d '{"name”:”lab4”}’
+
+// Link local and remote repository
+git remote add origin https://github.com/levylorenzo/lab4.git
+
+// check that they are linked
+git remote -v show
+
+…. it should output something like:
+origin	https://github.com/bzuckerman/lab-04-version-control.git (fetch)
+origin	https://github.com/bzuckerman/lab-04-version-control.git (push)
+
+===============
+
+// check status
+git status
+
+// add a file thats changed
+git add --all
+
+// commit to final push
+git commit -m ‘i add extra garlic’
+
+//final push to remote 
+git push origin master
+
+git log
+git log --color
+git diff --color
+git reset filename.txt
+git reset HEAD^
+
+
+FILE COMMANDS
+touch		make a file exist
+nano		edit the file
+cat			view the file
+ls -l			view permissions and details of file
+chmod… 		change permissions
+chmod u+x file.txt		allow user to EXECUTE the file
+chmod u-x file.txt		UN-allow user to EXECUTE the file
+
+SCRIPTS
+./scriptname.sh			RUN/execute the SCRIPT
+
+ps aux					show processes
+kill #####				kill #### process
+
+JAVA SCRIPT TAGS
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+</script>
+</body>
+</html>
+
+
+
+
+asdf
